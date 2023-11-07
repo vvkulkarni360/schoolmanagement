@@ -15,7 +15,7 @@ import AssignmentIcon from '@mui/icons-material/Assignment';
 const SideBar = () => {
     const location = useLocation();
     return (
-        <>
+        <div sx={{ backgroundColor: '#333', color: '#fff', height: '100vh', overflowY: 'auto' }}>
             <React.Fragment>
                 <ListItemButton component={Link} to="/">
                     <ListItemIcon>
@@ -78,7 +78,7 @@ const SideBar = () => {
                     <ListItemText primary="Logout" />
                 </ListItemButton>
             </React.Fragment>
-        </>
+        </div>
     )
 }
 

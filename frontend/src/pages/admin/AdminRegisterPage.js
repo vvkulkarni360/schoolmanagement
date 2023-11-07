@@ -35,7 +35,7 @@ const AdminRegisterPage = () => {
         event.preventDefault();
 
         const name = event.target.adminName.value;
-        const schoolName = event.target.schoolName.value;
+        const schoolName = event.target?.schoolName.value;
         const email = event.target.email.value;
         const password = event.target.password.value;
 

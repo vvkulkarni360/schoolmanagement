@@ -31,6 +31,7 @@ const teacherLogIn = async (req, res) => {
         let teacher = await Teacher.findOne({ email: req.body.email });
         if (teacher) {
             const validated = await bcrypt.compare(req.body.password, teacher.password);
+            console.log("validate",validated)
             if (validated) {
                 teacher = await teacher.populate("teachSubject", "subName sessions")
                 teacher = await teacher.populate("school", "schoolName")
